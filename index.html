@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio de Ignacio Oramas</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome para iconos (opcional pero recomendado) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -21,7 +20,7 @@
         </nav>
         <div class="hero">
             <h1>Hola, soy <span class="highlight">Ignacio Oramas</span></h1>
-            <p class="subtitle">Programador en formación &amp; Entusiasta de la tecnología</p>
+            <p class="subtitle">Desarrollador Full Stack (.NET / Python) &amp; Dev de Videojuegos</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn primary">Ver mis proyectos</a>
                 <a href="#contact" class="btn secondary">Contáctame</a>
@@ -34,10 +33,10 @@
             <h2>Sobre mí</h2>
             <div class="about-content">
                 <p>
-                    ¡Hola! Soy un programador apasionado por crear soluciones web. Actualmente estoy comenzando mi viaje en el mundo del desarrollo de software, aprendiendo tecnologías fundamentales y mejores prácticas.
+                    Soy un programador versátil con una base sólida en <strong>C#, Python y C++</strong>. Mi enfoque va más allá de escribir código: me especializo en crear soluciones robustas y bien documentadas, desde aplicaciones web complejas hasta prototipos de videojuegos con Inteligencia Artificial.
                 </p>
                 <p>
-                    Me considero una persona curiosa, autodidacta y siempre dispuesta a enfrentar nuevos retos para mejorar mis habilidades.
+                    Valoro el orden y la claridad. Mi flujo de trabajo incluye una documentación detallada (<strong>GEMINI.md</strong>) y un manejo sistemático de errores. He evolucionado desde algoritmos en C++ hasta el desarrollo de sistemas Full Stack con <strong>ASP.NET Core</strong> y <strong>Flask</strong>, demostrando capacidad para adaptarme y resolver problemas complejos.
                 </p>
             </div>
         </div>
@@ -45,32 +44,37 @@
 
     <section id="skills" class="section bg-alt">
         <div class="container">
-            <h2>Mis Habilidades</h2>
+            <h2>Mis Habilidades Tecnológicas</h2>
             <div class="skills-grid">
-                <!-- Tarjetas de habilidades -->
                 <div class="skill-card">
-                    <i class="fab fa-html5"></i>
-                    <h3>HTML5</h3>
+                    <i class="fab fa-microsoft"></i>
+                    <h3>C# & .NET</h3>
+                    <p>ASP.NET Core MVC, Entity Framework</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-css3-alt"></i>
-                    <h3>CSS3</h3>
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Flask, SQLAlchemy, Data Processing</p>
                 </div>
                 <div class="skill-card">
-                    <i class="fab fa-js"></i>
-                    <h3>JavaScript</h3>
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Game Dev</h3>
+                    <p>Godot Engine, GDScript, IA APIs</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Bases de Datos</h3>
+                    <p>SQL Server, MySQL, SQLite</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-code"></i>
+                    <h3>C++ / C</h3>
+                    <p>Estructuras de Datos, Lógica</p>
                 </div>
                 <div class="skill-card">
                     <i class="fab fa-git-alt"></i>
-                    <h3>Git</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fab fa-github"></i>
-                    <h3>GitHub</h3>
-                </div>
-                <div class="skill-card">
-                    <i class="fas fa-terminal"></i>
-                    <h3>Terminal</h3>
+                    <h3>Herramientas</h3>
+                    <p>Git, GitHub, LibMan</p>
                 </div>
             </div>
         </div>
@@ -80,26 +84,51 @@
         <div class="container">
             <h2>Proyectos Destacados</h2>
             <div class="projects-grid">
+                <!-- Proyecto 1: Autolavado -->
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Portafolio Personal</h3>
-                        <p>Este sitio web. Diseñado desde cero con HTML y CSS para mostrar mi perfil profesional.</p>
+                        <h3>Sistema de Autolavado (Mvcrud)</h3>
+                        <p class="tech-tag">C# .NET | ASP.NET MVC | SQL Server</p>
+                        <p>Aplicación web robusta para gestión de negocios. Implementa autenticación (Identity), relaciones complejas (Clientes-Vehículos-Órdenes) y búsqueda dinámica con AJAX.</p>
                         <div class="project-links">
                             <a href="#" class="btn-link"><i class="fab fa-github"></i> Ver Código</a>
-                            <a href="#" class="btn-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Proyecto 2: UNEFA Survivor -->
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Próximo Proyecto</h3>
-                        <p>Actualmente trabajando en nuevas ideas para expandir mi portafolio.</p>
+                        <h3>UNEFA Survivor (Godot)</h3>
+                        <p class="tech-tag">Godot Engine | GDScript | IA (Groq API)</p>
+                        <p>Videojuego de supervivencia que integra Inteligencia Artificial para NPCs dinámicos. Incluye mecánicas de movimiento, colisiones y gestión optimizada de tokens para la API.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Proyecto 3: Sistema Flask -->
                 <div class="project-card">
                     <div class="project-info">
-                        <h3>Próximo Proyecto</h3>
-                        <p>Espacio reservado para futuras creaciones.</p>
+                        <h3>Sistema Web con Flask</h3>
+                        <p class="tech-tag">Python | Flask | SQLAlchemy | MySQL</p>
+                        <p>Desarrollo backend ágil utilizando micro-frameworks. Gestión eficiente de base de datos con ORM y estructura modular profesional.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
+                    </div>
+                </div>
+
+                 <!-- Proyecto 4: Datos y Gráficos -->
+                 <div class="project-card">
+                    <div class="project-info">
+                        <h3>Visualización de Datos</h3>
+                        <p class="tech-tag">Python | SQLite | Matplotlib</p>
+                        <p>Herramienta para el procesamiento y visualización de datos de servicio comunitario. Transforma registros crudos en gráficos informativos para la toma de decisiones.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-link"><i class="fab fa-github"></i> Ver Código</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,7 +138,7 @@
     <section id="contact" class="section bg-alt">
         <div class="container">
             <h2>Contacto</h2>
-            <p>¿Tienes alguna pregunta o propuesta? ¡Envíame un mensaje!</p>
+            <p>Estoy disponible para nuevos retos y colaboraciones. ¡Hablemos de código!</p>
             <div class="social-links">
                 <a href="https://github.com/Ignacio-Oramas" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
                 <a href="mailto:tu-email@ejemplo.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
@@ -120,7 +149,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Ignacio Oramas. Todos los derechos reservados.</p>
+            <p>&copy; 2026 Ignacio Oramas. Desarrollado con HTML, CSS y ❤️.</p>
         </div>
     </footer>
 </body>
