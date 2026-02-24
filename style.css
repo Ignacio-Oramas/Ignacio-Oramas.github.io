@@ -1,0 +1,239 @@
+:root {
+    --primary-color: #64ffda; /* Un verde menta/cian moderno */
+    --bg-color: #0a192f;      /* Azul muy oscuro */
+    --bg-alt: #112240;        /* Azul un poco menos oscuro para secciones alternas */
+    --text-color: #8892b0;    /* Gris azulado para texto */
+    --heading-color: #ccd6f6; /* Blanco grisáceo para títulos */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Estilos Generales */
+h1, h2, h3 {
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.bg-alt {
+    background-color: var(--bg-alt);
+}
+
+/* Header & Nav */
+header {
+    background-color: var(--bg-color);
+    padding-bottom: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--heading-color);
+    font-size: 0.9rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero .highlight {
+    color: var(--primary-color);
+}
+
+.hero .subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 1px solid var(--primary-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn.primary {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+.btn.primary:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.btn.secondary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.btn.secondary:hover {
+    background-color: #4cdbb9;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.skill-card {
+    background-color: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: var(--transition);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background-color: var(--bg-alt);
+    border-radius: 8px;
+    padding: 2rem;
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-links {
+    margin-top: 1.5rem;
+}
+
+.btn-link {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Contact & Footer */
+.social-links {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-btn {
+    font-size: 1.2rem;
+    color: var(--heading-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-btn:hover {
+    color: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Simplificación para móvil: ocultar menú por ahora */
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .section {
+        padding: 3rem 0;
+    }
+}
