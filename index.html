@@ -15,11 +15,14 @@
     <header>
         <nav>
             <div class="logo">Ignacio.dev</div>
-            <ul class="nav-links">
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-list">
                 <li><a href="#about">Sobre mí</a></li>
                 <li><a href="#skills">Habilidades</a></li>
                 <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
+                <li><a href="contactame.html">Contacto</a></li>
             </ul>
         </nav>
         <div class="hero">
@@ -27,7 +30,7 @@
             <p class="subtitle">Desarrollador (Php / Python)</p>
             <div class="hero-btns">
                 <a href="#projects" class="btn primary">Ver mis proyectos</a>
-                <a href="#contact" class="btn secondary">Contáctame</a>
+                <a href="contactame.html" class="btn secondary">Contáctame</a>
             </div>
         </div>
     </header>
@@ -156,8 +159,8 @@
             <div class="social-links">
                 <a href="https://github.com/Ignacio-Oramas" target="_blank" rel="noopener noreferrer"
                     class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="mailto:ignacioalfonsooramasflores@gmail.com" target="_blank" rel="noopener noreferrer"
-                    class="social-btn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="contactame.html" target="_blank" rel="noopener noreferrer" class="social-btn"><i
+                        class="fas fa-envelope"></i> Email</a>
                 <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin"></i>
                     LinkedIn</a>
             </div>
@@ -169,6 +172,22 @@
             <p>&copy; 2026 Ignacio Oramas.</p>
         </div>
     </footer>
+
+    <script>
+        const menuToggle = document.getElementById('mobile-menu');
+        const navList = document.getElementById('nav-list');
+
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navList.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
