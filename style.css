@@ -224,16 +224,114 @@ footer {
 }
 
 /* Mobile Responsive */
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Simplificación para móvil: ocultar menú por ahora */
+    .menu-toggle {
+        display: block;
     }
-    
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 2rem;
+        background-color: var(--bg-alt);
+        width: 200px;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
     .hero h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     
     .section {
         padding: 3rem 0;
     }
+
+    .hero-btns {
+        flex-direction: column;
+    }
+}
+
+/* Contact Form Styles */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--bg-alt);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--heading-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 0.8rem;
+    background-color: var(--bg-color);
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    color: var(--heading-color);
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+/* Notification Styles */
+.notification {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 1000;
+}
+
+.notification.show {
+    transform: translateY(0);
+    opacity: 1;
 }
